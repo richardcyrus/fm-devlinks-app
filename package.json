@@ -1,0 +1,102 @@
+{
+  "name": "fm-devlinks-app",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "vite build && vite build --ssr",
+    "dev": "vite dev",
+    "fix": "concurrently --raw npm:fix:*",
+    "fix:code": "eslint --cache --cache-location ./node_modules/.cache/eslint --fix --ignore-path .gitignore \"**/*.[jt]s?(x)\"",
+    "fix:css": "stylelint \"**/*.css\" --cache --cache-location ./node_modules/.cache/stylelint --fix --allow-empty-input",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,cjs,mjs,ts,tsx,md,mdx,astro,json}\"",
+    "lint": "concurrently --raw npm:lint:*",
+    "lint:code": "eslint --cache --cache-location ./node_modules/.cache/eslint --ignore-path .gitignore \"**/*.[jt]s?(x)\"",
+    "lint:css": "stylelint \"**/*.css\" --cache --cache-location ./node_modules/.cache/stylelint --allow-empty-input",
+    "prepare": "husky install",
+    "start": "remix-serve ./build/index.js",
+    "test": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@remix-run/node": "^2.3.1",
+    "@remix-run/react": "^2.3.1",
+    "@remix-run/serve": "^2.3.1",
+    "isbot": "^3.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.3.1",
+    "@remix-run/eslint-config": "^2.3.1",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/eslint": "^8.44.7",
+    "@types/react": "^18.2.39",
+    "@types/react-dom": "^18.2.17",
+    "autoprefixer": "^10.4.16",
+    "axe-core": "^4.8.2",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-testing-library": "^6.2.0",
+    "happy-dom": "^12.10.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "micromatch": "^4.0.5",
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^12.0.1",
+    "postcss-preset-env": "^9.3.0",
+    "postcss-sort-media-queries": "^5.2.0",
+    "prettier": "^3.1.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.2",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  },
+  "browserslist": {
+    "production": [
+      ">= 0.5%",
+      "last 2 major versions",
+      "not dead",
+      "Chrome >= 64",
+      "Edge >= 79",
+      "Firefox >= 67",
+      "Firefox ESR",
+      "opera >= 51",
+      "iOS >= 12",
+      "Safari >= 12",
+      "not Explorer <= 11",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 edge version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "axe-core",
+    "css-custom-properties",
+    "frontend-mentor",
+    "html5",
+    "reactjs",
+    "remix-run",
+    "stylelint",
+    "testing-library",
+    "typescript",
+    "vitest"
+  ]
+}
