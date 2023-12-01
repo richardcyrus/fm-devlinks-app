@@ -15,7 +15,7 @@
     "lint:css": "stylelint \"**/*.css\" --cache --cache-location ./node_modules/.cache/stylelint --allow-empty-input",
     "prepare": "husky install",
     "start": "remix-serve ./build/index.js",
-    "test": "vitest",
+    "test:unit": "vitest",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
