@@ -1,0 +1,82 @@
+a.button {
+  text-decoration: none;
+}
+
+.button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 1rem;
+  justify-content: center;
+  min-height: 2.88rem;
+  min-width: 10ch;
+  padding-block: 0.69rem 0.69rem;
+  padding-inline: 0;
+  text-align: center;
+  transition: 220ms all ease-in-out;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}
+
+.primary {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 150%;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-purple-hover);
+    box-shadow: 0 0 32px hsl(252deg 100% 62% / 25%);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 4px var(--color-purple-hover);
+    outline-color: transparent;
+    outline-style: solid;
+  }
+
+  &:disabled {
+    background-color: var(--color-purple);
+    box-shadow: none;
+    opacity: 0.25;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-purple);
+  color: var(--color-purple);
+  font-weight: 600;
+  line-height: 150%;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-light-purple);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 4px var(--color-purple);
+    outline-color: transparent;
+    outline-style: solid;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    opacity: 0.25;
+  }
+}
+
+.medium {
+  padding-inline: 1.7rem;
+}
+
+.full {
+  width: 100%;
+}
