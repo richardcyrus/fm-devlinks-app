@@ -1,0 +1,149 @@
+/* stylelint-disable property-no-vendor-prefix */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  color: currentcolor;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-style: italic;
+  height: auto;
+  max-width: 100%;
+  shape-margin: 0.75rem;
+  vertical-align: middle;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+optgroup,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/* stylelint-enable */
+
+:root {
+  --color-dark-grey: hsl(0deg 0% 20%); /* #333333 */
+  --color-grey: hsl(0deg 0% 45%); /* #737373 */
+  --color-light-grey: hsl(0deg 0% 98%); /* #fafafa */
+  --color-light-purple: hsl(252deg 100% 96%); /* #efebff */
+  --color-medium-grey: hsl(0deg 0% 85%); /* #d9d9d9 */
+  --color-purple-hover: hsl(252deg 100% 84%); /* #beadff */
+  --color-purple: hsl(252deg 100% 62%); /* #633cff */
+  --color-red: hsl(0deg 100% 61%); /* #ff3939 */
+  --color-white: hsl(0deg 0% 100%); /* #ffffff */
+  --font-size-large: 2rem; /* 32px */
+  --font-size-regular: 1rem; /* 16px */
+  --font-size-small: 0.75rem; /* 12px */
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+body {
+  background-color: var(--color-light-grey);
+}
+
+.heading-text {
+  color: var(--color-dark-grey);
+  font-family: 'Instrument Sans', sans-serif;
+  letter-spacing: 0;
+  line-height: 150%;
+}
+
+.heading-m {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+}
+
+.heading-s {
+  font-size: var(--font-size-regular);
+  font-weight: 600;
+}
+
+.body-text {
+  color: var(--color-dark-grey);
+  font-family: 'Instrument Sans', sans-serif;
+  letter-spacing: 0;
+  line-height: 150%;
+}
+
+.body-text-m {
+  font-size: var(--font-size-regular);
+}
+
+.body-text-s {
+  font-size: var(--font-size-small);
+}

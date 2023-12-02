@@ -6,7 +6,7 @@ module.exports = {
       true,
       { ignoreShorthands: ['/flex/', '/grid/'] },
     ],
-    'font-family-name-quotes': 'always-where-required',
+    'font-family-name-quotes': 'always-where-recommended',
     'comment-empty-line-before': [
       'always',
       {
