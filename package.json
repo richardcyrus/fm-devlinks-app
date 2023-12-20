@@ -14,54 +14,70 @@
     "lint:code": "eslint --cache --cache-location ./node_modules/.cache/eslint --ignore-path .gitignore \"**/*.[jt]s?(x)\"",
     "lint:css": "stylelint \"**/*.css\" --cache --cache-location ./node_modules/.cache/stylelint --allow-empty-input",
     "prepare": "husky install",
-    "start": "remix-serve ./build/index.js",
-    "test:unit": "vitest",
+    "start": "remix-serve ./build/server/index.js",
+    "test:unit": "vitest --run",
+    "test:unit:coverage": "vitest run --coverage",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@remix-run/node": "^2.3.1",
-    "@remix-run/react": "^2.3.1",
-    "@remix-run/serve": "^2.3.1",
+    "@remix-run/node": "^2.4.0",
+    "@remix-run/react": "^2.4.0",
+    "@remix-run/serve": "^2.4.0",
+    "class-variance-authority": "^0.7.0",
     "isbot": "^3.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.3.1",
-    "@remix-run/eslint-config": "^2.3.1",
+    "@remix-run/dev": "^2.4.0",
+    "@remix-run/eslint-config": "^2.4.0",
+    "@remix-run/testing": "^2.4.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-prettier": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",
-    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
-    "@types/eslint": "^8.44.7",
-    "@types/react": "^18.2.39",
-    "@types/react-dom": "^18.2.17",
+    "@types/eslint": "^8.56.0",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@typescript-eslint/typescript-estree": "^6.15.0",
+    "@vitest/coverage-v8": "^1.1.0",
     "autoprefixer": "^10.4.16",
-    "axe-core": "^4.8.2",
+    "axe-core": "^4.8.3",
     "concurrently": "^8.2.2",
-    "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-testing-library": "^6.2.0",
     "happy-dom": "^12.10.3",
     "husky": "^8.0.3",
-    "lint-staged": "^15.1.0",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.0",
     "micromatch": "^4.0.5",
     "postcss-import": "^15.1.0",
-    "postcss-nesting": "^12.0.1",
+    "postcss-nesting": "^12.0.2",
     "postcss-preset-env": "^9.3.0",
     "postcss-sort-media-queries": "^5.2.0",
-    "prettier": "^3.1.0",
-    "stylelint": "^15.11.0",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-order": "^6.0.3",
-    "typescript": "^5.3.2",
+    "prettier": "^3.1.1",
+    "stylelint": "^16.0.2",
+    "stylelint-config-standard": "^35.0.0",
+    "stylelint-order": "^6.0.4",
+    "typescript": "^5.3.3",
     "unplugin-fonts": "^1.1.1",
-    "vite": "^5.0.2",
+    "vite": "^5.0.10",
     "vite-plugin-svgr": "^4.2.0",
-    "vite-tsconfig-paths": "^4.2.1",
-    "vitest": "^0.34.6"
+    "vite-tsconfig-paths": "^4.2.2",
+    "vitest": "^1.1.0"
   },
   "browserslist": {
     "production": [
@@ -86,7 +102,7 @@
     ]
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.19.0"
   },
   "keywords": [
     "axe-core",
@@ -99,5 +115,8 @@
     "testing-library",
     "typescript",
     "vitest"
-  ]
+  ],
+  "volta": {
+    "node": "18.19.0"
+  }
 }

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   arrowParens: 'always',
   embeddedLanguageFormatting: 'auto',
   htmlWhitespaceSensitivity: 'css',
