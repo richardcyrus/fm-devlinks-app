@@ -1,5 +1,7 @@
-import type { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import type { ButtonHTMLAttributes } from 'react'
 
+import type { LinkProps, NavLinkProps } from '@remix-run/react'
+import { Link, NavLink } from '@remix-run/react'
 import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
@@ -18,13 +20,35 @@ const button = cva('button', {
   },
 })
 
+const navigationButton = cva('button', {
+  variants: {
+    intent: {
+      default: 'default',
+      primary: 'primary',
+      secondary: 'secondary',
+    },
+    kind: {
+      links: 'links',
+      profile: 'profile',
+      preview: 'preview',
+    },
+    size: {
+      medium: 'medium',
+      full: 'full',
+      icon: 'icon-only',
+    },
+  },
+})
+
 interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof button> {}
 
-interface AnchorProps
-  extends AnchorHTMLAttributes<HTMLAnchorElement>,
-    VariantProps<typeof button> {}
+interface LinkButtonProps extends LinkProps, VariantProps<typeof button> {}
+
+interface NavButtonProps
+  extends NavLinkProps,
+    VariantProps<typeof navigationButton> {}
 
 export function Button({ className, intent, size, ...props }: ButtonProps) {
   // eslint-disable-next-line react/jsx-props-no-spreading
@@ -33,15 +57,37 @@ export function Button({ className, intent, size, ...props }: ButtonProps) {
 
 export function LinkButton({
   children,
+  to,
   className,
   intent,
   size,
   ...props
-}: AnchorProps) {
+}: LinkButtonProps) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <a className={button({ intent, size, className })} {...props}>
+    <Link to={to} className={button({ intent, size, className })} {...props}>
       {children}
-    </a>
+    </Link>
+  )
+}
+
+export function NavButton({
+  children,
+  to,
+  className,
+  intent,
+  kind,
+  size,
+  ...props
+}: NavButtonProps) {
+  return (
+    <NavLink
+      to={to}
+      className={navigationButton({ intent, kind, size, className })}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+    >
+      {children}
+    </NavLink>
   )
 }
