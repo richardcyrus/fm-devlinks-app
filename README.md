@@ -70,6 +70,9 @@ Users should be able to:
 ### Useful resources
 
 - [How to Favicon in 2023: Six files that fit most needs](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs) - This helped me with the generation of a Favicon using the logo provided with the project source.
+- [CSS Button Styling Guide](https://moderncss.dev/css-button-styling-guide/) - Used to define the base styling for the <Button> and <LinkButton> components.
+- [The many methods for using SVG icons](https://chenhuijing.com/blog/the-many-methods-for-using-svg-icons/#👟) - Used for adding the icon variants for navigation buttons.
+- [Hide text using css](https://stackoverflow.com/questions/471510/hide-text-using-css) - Used for the icon only variant of the navigation elements.
 
 ## Author
 
