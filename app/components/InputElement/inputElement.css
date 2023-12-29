@@ -1,0 +1,63 @@
+.input {
+  --input-border: var(--color-medium-grey);
+
+  background-color: #fff;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  color: var(--color-dark-grey);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  padding: 0.75em 1em;
+  transition: 180ms box-shadow ease-in-out;
+}
+
+.input:not(textarea) {
+  height: 3rem;
+  line-height: 150%;
+}
+
+.input[readonly] {
+  border-style: dotted;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.input[disabled] {
+  --input-border: var(--color-grey);
+
+  background-color: var(--color-medium-grey);
+  cursor: not-allowed;
+}
+
+.input:focus {
+  border-color: var(--color-purple);
+  box-shadow: 0 0 32px hsl(252deg 100% 62% / 25%);
+  outline: 3px solid transparent;
+}
+
+.invalid {
+  --input-border: var(--color-red);
+}
+
+.email,
+.link,
+.password {
+  background-attachment: scroll;
+  background-position: 16px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-left: 46px;
+}
+
+.email {
+  background-image: url('/app/assets/images/icon-email.svg');
+}
+
+.link {
+  background-image: url('/app/assets/images/icon-link.svg');
+}
+
+.password {
+  background-image: url('/app/assets/images/icon-password.svg');
+}
