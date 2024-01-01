@@ -1,0 +1,227 @@
+.profile-button {
+  align-items: center;
+  background-color: var(--background, transparent);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-white);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  min-height: 3.5rem;
+  min-width: 14.8125rem;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 220ms all ease-in-out;
+
+  @media screen and (-ms-high-contrast: active) {
+    border: 2px solid currentcolor;
+  }
+}
+
+.profile-button:hover,
+.profile-button:active {
+  background-color: color-mix(
+    in srgb,
+    var(--background),
+    var(--mix-color, #000) var(--mix-percent, 30%)
+  );
+}
+
+.profile-button:focus-visible {
+  box-shadow: 0 0 0 4px
+    color-mix(
+      in srgb,
+      var(--background),
+      var(--mix-color, #000) var(--mix-percent, 30%)
+    );
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.profile-button:disabled {
+  background-color: color-mix(in srgb, var(--background), #fff 30%);
+  box-shadow: none;
+  opacity: 0.25;
+}
+
+.profile-button::before,
+.profile-button::after {
+  align-items: center;
+  background-color: currentcolor;
+  content: '';
+  display: inline-flex;
+  height: 16px;
+  justify-content: center;
+  margin-inline-end: 0.64rem;
+  mask-repeat: no-repeat;
+  width: 16px;
+}
+
+.profile-button::after {
+  justify-content: flex-end;
+  margin-inline: auto 0;
+  mask-image: url('/app/assets/images/icon-arrow-right.svg');
+}
+
+.github {
+  --background: #1a1a1a;
+}
+
+.github:hover,
+.github:active,
+.github:focus-visible {
+  --mix-color: #fff;
+}
+
+.github::before {
+  mask-image: url('/app/assets/service-icons/icon-github.svg');
+}
+
+.frontend-mentor {
+  --background: #fff;
+
+  border: 1px solid var(--color-medium-grey);
+  color: var(--color-dark-grey);
+}
+
+.frontend-mentor::before {
+  mask-image: url('/app/assets/service-icons/icon-frontend-mentor.svg');
+}
+
+.twitter {
+  --background: #43b7e9;
+}
+
+.twitter::before {
+  mask-image: url('/app/assets/service-icons/icon-twitter.svg');
+}
+
+.twitter:focus-visible {
+  --mix-percent: 50%;
+}
+
+.linkedin {
+  --background: #2d68ff;
+}
+
+.linkedin::before {
+  mask-image: url('/app/assets/service-icons/icon-linkedin.svg');
+}
+
+.youtube {
+  --background: #ee3939;
+}
+
+.youtube::before {
+  mask-image: url('/app/assets/service-icons/icon-youtube.svg');
+}
+
+.facebook {
+  --background: #2442ac;
+}
+
+.facebook::before {
+  mask-image: url('/app/assets/service-icons/icon-facebook.svg');
+}
+
+.twitch {
+  --background: #ee3fc8;
+}
+
+.twitch::before {
+  mask-image: url('/app/assets/service-icons/icon-twitch.svg');
+}
+
+.dev-to {
+  --background: var(--color-dark-grey);
+}
+
+.dev-to::before {
+  /**
+ * This is a hack. To display according to the design, it required inverting the
+ * colors in the original logo. The mask is used to apply the correct shape for
+ * for the logo.
+ */
+  background-image: url('/app/assets/service-icons/icon-devto-inverted.svg');
+  mask-image: url('/app/assets/service-icons/icon-devto-inverted.svg');
+}
+
+.dev-to:hover,
+.dev-to:active {
+  --mix-color: #fff;
+}
+
+.dev-to:focus-visible {
+  --mix-color: #fff;
+  --mix-percent: 20%;
+}
+
+.codewars {
+  --background: #8a1a50;
+}
+
+.codewars::before {
+  mask-image: url('/app/assets/service-icons/icon-codewars.svg');
+}
+
+.freecodecamp {
+  --background: #302267;
+}
+
+.freecodecamp::before {
+  mask-image: url('/app/assets/service-icons/icon-freecodecamp.svg');
+}
+
+.freecodecamp:hover,
+.freecodecamp:active {
+  --mix-color: #fff;
+}
+
+.freecodecamp:focus-visible {
+  --mix-color: #fff;
+  --mix-percent: 20%;
+}
+
+.gitlab {
+  --background: #eb4925;
+}
+
+.gitlab::before {
+  mask-image: url('/app/assets/service-icons/icon-gitlab.svg');
+}
+
+.hashnode {
+  --background: #0330d1;
+}
+
+.hashnode::before {
+  mask-image: url('/app/assets/service-icons/icon-hashnode.svg');
+}
+
+.stack-overflow {
+  --background: #ec7100;
+}
+
+.stack-overflow::before {
+  height: 17px;
+  mask-image: url('/app/assets/service-icons/icon-stack-overflow.svg');
+}
+
+.codepen {
+  --background: hsl(232.5deg 11.76% 13.33%);
+}
+
+.codepen:hover,
+.codepen:active,
+.codepen:focus-visible {
+  --mix-color: #fff;
+}
+
+.codepen::before {
+  mask-image: url('/app/assets/service-icons/icon-codepen.svg');
+}
