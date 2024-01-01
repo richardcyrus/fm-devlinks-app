@@ -12,7 +12,7 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.{css,js,jsx,cjs,mjs,ts,tsx,md,mdx,astro,json}\"",
     "lint": "concurrently --raw npm:lint:*",
     "lint:code": "eslint --cache --cache-location ./node_modules/.cache/eslint --ignore-path .gitignore \"**/*.[jt]s?(x)\"",
-    "lint:css": "stylelint \"**/*.css\" --cache --cache-location ./node_modules/.cache/stylelint --allow-empty-input",
+    "lint:css": "stylelint \"**/*.css\" --cache --cache-location ./node_modules/.cache/stylelint --ignore-path .gitignore --allow-empty-input",
     "prepare": "husky install",
     "start": "remix-serve ./build/server/index.js",
     "test:unit": "vitest --run",
@@ -26,7 +26,8 @@
     "class-variance-authority": "^0.7.0",
     "isbot": "^3.7.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.4.0",
