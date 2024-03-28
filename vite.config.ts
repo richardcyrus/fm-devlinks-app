@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { unstable_vitePlugin as remix } from '@remix-run/dev'
+import { vitePlugin as remix } from '@remix-run/dev'
 import { installGlobals } from '@remix-run/node'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Unfonts from 'unplugin-fonts/vite'
@@ -12,8 +12,6 @@ installGlobals()
 
 export default defineConfig({
   plugins: [
-    !process.env.VITEST && remix(),
-    tsconfigPaths(),
     svgr({
       svgrOptions: {
         plugins: [
@@ -49,6 +47,8 @@ export default defineConfig({
         injectTo: 'head-prepend',
       },
     }),
+    !process.env.VITEST && remix(),
+    tsconfigPaths(),
   ],
   test: {
     coverage: {
