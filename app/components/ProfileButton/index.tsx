@@ -34,7 +34,12 @@ const platformStore: PlatformStoreMap = new Map([
   ['youtube', { label: 'YouTube', variant: 'youtube' }],
 ])
 
-function getPlatformVariants() {
+/**
+ * Retrieves platform variants from the platform store.
+ *
+ * @return {Record<string, string>} The platform variants
+ */
+function getPlatformVariants(): Record<string, string> {
   const variants: Record<string, string> = {}
 
   for (const [key, value] of platformStore.entries()) {
@@ -44,7 +49,12 @@ function getPlatformVariants() {
   return variants
 }
 
-function getPlatformLabels() {
+/**
+ * Retrieves platform labels from the platform store and returns them as a map.
+ *
+ * @return {Map<string, string>} The map of platform labels.
+ */
+function getPlatformLabels(): Map<string, string> {
   const labels: Map<string, string> = new Map()
 
   for (const [key, value] of platformStore.entries()) {
@@ -67,6 +77,26 @@ interface ProfileButtonProps
   profileUrl: ProfileUrl
 }
 
+/**
+ * Asynchronously copies the given text to the clipboard using the navigator API if available,
+ * otherwise uses document.execCommand.
+ *
+ * @param {string} text - The text to be copied to the clipboard.
+ * @return {Promise<void>} A Promise that resolves once the text is successfully copied to the clipboard.
+ */
+async function copyToClipboard(text: string): Promise<void> {
+  return await navigator.clipboard.writeText(text)
+}
+
+/**
+ * Renders a profile button with the specified platform, class name, and profile URL.
+ *
+ * @param className
+ * @param platform
+ * @param profileUrl
+ * @param {ProfileButtonProps} props - The properties for the profile button
+ * @return {JSX.Element} A button component representing the profile button
+ */
 export function ProfileButton({
   className,
   platform,
@@ -75,11 +105,16 @@ export function ProfileButton({
 }: ProfileButtonProps) {
   const labels = getPlatformLabels()
 
+  const handleCopyClick = async () => {
+    await copyToClipboard(profileUrl)
+  }
+
   return (
     <button
       type="button"
       className={profileButtonVariants({ platform, className })}
       data-clipboard-text={profileUrl}
+      onClick={handleCopyClick}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     >
