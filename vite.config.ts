@@ -20,7 +20,7 @@ export default defineConfig({
           '@svgr/plugin-prettier',
         ],
         dimensions: false,
-        typescript: true,
+        typescript: false,
         svgoConfig: {
           plugins: [
             {
@@ -31,6 +31,7 @@ export default defineConfig({
           ],
         },
       },
+      include: '**/*.svg?react',
     }),
     Unfonts({
       custom: {
