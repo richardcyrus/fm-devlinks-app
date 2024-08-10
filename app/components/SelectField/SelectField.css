@@ -1,0 +1,178 @@
+.codepen {
+  background-image: url('/app/assets/service-icons/icon-codepen.svg');
+}
+
+.codewars {
+  background-image: url('/app/assets/service-icons/icon-codewars.svg');
+}
+
+.dev-to {
+  background-image: url('/app/assets/service-icons/icon-devto.svg');
+}
+
+.facebook {
+  background-image: url('/app/assets/service-icons/icon-facebook.svg');
+}
+
+.free-code-camp {
+  background-image: url('/app/assets/service-icons/icon-freecodecamp.svg');
+}
+
+.frontend-mentor {
+  background-image: url('/app/assets/service-icons/icon-frontend-mentor.svg');
+}
+
+.github {
+  background-image: url('/app/assets/service-icons/icon-github.svg');
+}
+
+.gitlab {
+  background-image: url('/app/assets/service-icons/icon-gitlab.svg');
+}
+
+.hashnode {
+  background-image: url('/app/assets/service-icons/icon-hashnode.svg');
+}
+
+.link {
+  background-image: url('/app/assets/images/icon-link.svg');
+}
+
+.linked-in {
+  background-image: url('/app/assets/service-icons/icon-linkedin.svg');
+}
+
+.stack-overflow {
+  background-image: url('/app/assets/service-icons/icon-stack-overflow.svg');
+}
+
+.twitch {
+  background-image: url('/app/assets/service-icons/icon-twitch.svg');
+}
+
+.twitter {
+  background-image: url('/app/assets/service-icons/icon-twitter.svg');
+}
+
+.youtube {
+  background-image: url('/app/assets/service-icons/icon-youtube.svg');
+}
+
+.icon {
+  height: 1em;
+  margin-inline-end: 1em;
+  width: 1em;
+}
+
+.select-trigger {
+  align-items: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-medium-grey);
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: var(--font-size-regular);
+  height: 3rem;
+  justify-content: space-between;
+  min-width: 15.9375rem;
+  padding: 0.75rem 1rem;
+
+  @media screen and (width >= 768px) {
+    min-width: 37.5rem;
+  }
+
+  @media screen and (width >= 992px) {
+    min-width: 43rem;
+  }
+}
+
+.select-trigger:hover,
+.select-trigger:focus,
+.select-trigger:focus-visible {
+  border: 1px solid var(--color-purple);
+  box-shadow: 0 0 32px hsl(252deg 100% 62% / 25%);
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.select-trigger[data-placeholder] {
+  color: var(--color-dark-grey);
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+}
+
+.select-icon > svg,
+.select-scroll-button > svg {
+  height: 9px;
+  width: 14px;
+}
+
+.select-trigger[data-state='open'] > .select-icon > svg {
+  transform: rotate(180deg);
+  transition: 0.8s ease;
+}
+
+.select-trigger[data-state='closed'] > .select-icon > svg {
+  transition: 0.8s ease;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.select-content {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-medium-grey);
+  border-radius: 8px;
+  color: var(--color-dark-grey);
+  max-height: var(--radix-select-content-available-height);
+  overflow: hidden;
+  width: var(--radix-select-trigger-width);
+}
+
+.select-content[data-state='open'] {
+  box-shadow: 0 0 32px hsl(0deg 0% 20% / 25%);
+}
+
+.select-scroll-button {
+  display: inline-flex;
+  justify-content: end;
+  padding: 1rem;
+}
+
+.select-item {
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  display: flex;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: var(--font-size-regular);
+  font-weight: 400;
+  height: 3rem;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.select-item:hover,
+.select-item:focus,
+.select-item:focus-visible,
+.select-item[data-state='checked'] {
+  color: var(--color-purple);
+  outline-color: transparent;
+  outline-style: solid;
+
+  .icon {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(46%) saturate(6007%)
+      hue-rotate(247deg) brightness(99%) contrast(104%);
+  }
+}
+
+.select-item-content {
+  align-items: center;
+  display: inline-flex;
+}
+
+.select-separator {
+  background-color: var(--color-medium-grey);
+  height: 1px;
+  margin-inline: 1rem;
+}
