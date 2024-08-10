@@ -20,7 +20,7 @@ export default defineConfig({
           '@svgr/plugin-prettier',
         ],
         dimensions: false,
-        typescript: true,
+        typescript: false,
         svgoConfig: {
           plugins: [
             {
@@ -31,6 +31,7 @@ export default defineConfig({
           ],
         },
       },
+      include: '**/*.svg?react',
     }),
     Unfonts({
       custom: {
@@ -47,7 +48,14 @@ export default defineConfig({
         injectTo: 'head-prepend',
       },
     }),
-    !process.env.VITEST && remix(),
+    !process.env.VITEST &&
+      remix({
+        future: {
+          v3_fetcherPersist: true,
+          v3_relativeSplatPath: true,
+          v3_throwAbortReason: true,
+        },
+      }),
     tsconfigPaths(),
   ],
   test: {

@@ -62,6 +62,7 @@ Users should be able to:
 
 - [React](https://reactjs.org/) - JS library
 - [Remix](https://remix.run/) - React full stack framework
+- [Radix-UI Primitives](https://www.radix-ui.com/primitives) - Core building blocks for your design system
 
 ### What I learned
 
@@ -73,6 +74,7 @@ Users should be able to:
 - [CSS Button Styling Guide](https://moderncss.dev/css-button-styling-guide/) - Used to define the base styling for the <Button> and <LinkButton> components.
 - [The many methods for using SVG icons](https://chenhuijing.com/blog/the-many-methods-for-using-svg-icons/#👟) - Used for adding the icon variants for navigation buttons.
 - [Hide text using css](https://stackoverflow.com/questions/471510/hide-text-using-css) - Used for the icon only variant of the navigation elements.
+- [Forwarding React Refs with TypeScript](https://www.carlrippon.com/react-forwardref-typescript/)
 
 ## Author
 
